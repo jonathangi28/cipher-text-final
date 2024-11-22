@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/cipher.css">
+        <title>Cipher Text Web App - Jonathan Gillman</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/d74f01a380.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main>
+            <header class="main__header">
+                <div>
+                    <h1 class="main__title">Cipher Text</h1>
+                    <figure>
+                        <img class="card__image card__project-image" src="assets/img/cipher-text.jpg" alt="A picture of people sitting around a circle desk with a lock logo in the middle.">
+                        <figcaption><em>Picture of people sitting around a circle desk with a lock in the middle.</em></figcaption>
+                    </figure>
+                </div>
+            </header>
+            <section>
+                <div class="card card__copy card__cipher">
+                    <div>
+                        <br>
+                        <sub>"Why does the government dislike citizens learning encryption? Because they prefer their secrets like their coffee - unfiltered and easy to spill!" - Unknown</sub>
+                        <br><br>
+                        <label for="alphabet-keys">Substitution Cipher Alphabet Keys (cannot be changed):</label>
+                        <input id="alphabet-keys" name="alphabet-keys" autocomplete="text" readonly="true" value="abcdefghijklmnopqrstuvwxyz"></input>
+
+                        <label for="alphabet-values">Substitution Cipher Alphabet Values:</label>
+                        <br>
+                        <sub>If you modify the default values, keep them stored securely. You'll need them for future decryption. Example: a=e, b=f, c=g, etc...</sub>
+                        <div id="error-alpha-values"></div>
+                        <input id="alphabet-values" name="alphabet-values" autocomplete="text" maxlength="26" minlength="26" value="efghijklmnopqrstuvwxyzabcd"></input>
+
+                        <label for="secret-key">AES-256 Secret Key:</label>
+                        <br>
+                        <sub>Craft your own secret key and guard it closely, as it's the sole method to unlock your message. Must be 32 characters long.</sub>
+                        <div id="error-secret-key"></div>
+                        <input id="secret-key" name="secret-key" maxlength="32" minlength="32" rows="10" cols="50"></input>
+                        <br><br>
+                        <fieldset class="cipher-input">
+                            <legend>Encryupt Your Message:</legend>
+
+                            <label for="plaintext-message">Your Message:</label>
+                            <div id="error-plaintext-message"></div>
+                            <textarea id="plaintext-message" name="plaintext-message" rows="10" cols="50" placeholder="Enter text to encrypt..."></textarea>
+                            <button id="btn-encrypt" class="card__btn" onclick="encryptMessage()">Encrypt Your Message</button>
+                            <br><br>
+                            <label for="encrypted-results">Results:</label>
+                            <div id="error-encrypted-results"></div>
+                            <textarea id="encrypted-results" name="encrypted-results" rows="10" cols="50"></textarea>
+                            <button class="card__btn" onclick="copyTextToClipboardEncryptedResults()"><i class="fa-regular fa-clipboard"></i> Copy Text</button>
+                            <div id="copy-text-encrypted-results"></div>
+                        </fieldset>
+                        <br><br>
+                        <button  class="card__btn buy-me-a-drink" onclick="window.open('https://www.paypal.com/ncp/payment/EC73FWSYH5ZMA', '_blank')">If you like Cipher Text, buy me a drink</button>
+                        <br><br>
+                        <fieldset class="cipher-input">
+                            <legend>Decrypt a Message:</legend>
+
+                            <label for="encrypted-message">Your Encrypted Message:</label>
+                            <div id="error-encrypted-message"></div>
+                            <textarea id="encrypted-message" name="encrypted-message" rows="10" cols="50" placeholder="Enter encrypted message"></textarea>
+                            <button class="card__btn" onclick="decryptMessage()">Decrypt a Message</button>
+                            <br><br>
+                            <label for="decrypted-results">Results:</label>
+                            <div id="error-decrypted-results"></div>
+                            <textarea id="decrypted-results" name="decrypted-results" rows="10" cols="50"></textarea>
+                            <button class="card__btn" onclick="copyTextToClipboardDecryptedResults()"><i class="fa-regular fa-clipboard"></i> Copy Text</button>
+                            <div id="copy-text-decrypted-results"></div>
+                        </fieldset>
+                    </div>
+                    <br><br>
+                </div>
+                <br><br>
+            </section>
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/cipher.js"></script>
+    </body>
+</html>

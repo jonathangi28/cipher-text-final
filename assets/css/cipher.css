@@ -1,0 +1,170 @@
+@import url(typography.css);
+
+body {
+    background-image: linear-gradient(to top, #004d00 0%, #006600 100%);
+    color: #f0f0f0;
+    width: auto;
+    min-width: 320px;
+}
+
+a { color: #66ff66; }
+a:hover { color: #99ff99; }
+
+textarea {
+    color: #2e7d32;
+    width: 100%;
+    height: 10em;
+    border-radius: 0.63em;
+    margin: 0.63em 0;
+    padding: 0.5em;
+}
+
+input {
+    color: #2e7d32;
+    width: 100%;
+    height: 2.88em;
+    border-radius: 0.63em;
+    margin: 0.63em 0;
+}
+
+button:hover { background-color: #00b300; }
+
+.left {
+    text-align: left;
+}
+
+.cipher-input {
+    background-image: linear-gradient(to right, #004d00 0%, #003300 100%);
+    border-radius: 0.63em;
+    width: auto;
+    padding: 1em 2.22em 1em 1.22em;
+    margin: auto;
+}
+
+.card {
+    background-image: linear-gradient(to right, #003300 0%, #004d00 100%);
+    color: #f0f0f0;
+    border-radius: 0.63em;
+    box-shadow: 0 0.25em 0.94em rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card__copy {
+    text-align: left;
+    padding: 0 1.25em 0 1.25em;
+}
+
+.card__image {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    border-radius: 0.63em;
+    box-shadow: 0 0.125em 0.125em #000;
+}
+
+.card__project-image {
+    border-radius: 10%;
+    box-shadow: 0 0.425em 0.45em rgba(0, 0, 0, 0.5);
+}
+
+.main__header {
+    text-align: center;
+    padding-top: 1.25em;
+}
+
+#alphabet-keys {
+    color: #fff;
+    background-color: rgb(132, 132, 132);
+    cursor: not-allowed;
+}
+
+figure,
+figcaption {
+    color: #2e7d32;
+    text-align: center;
+    font-size: smaller;
+}
+
+sub,
+legend
+{
+    color: yellow;
+}
+
+#error-alpha-values,
+#error-secret-key,
+#error-plaintext-message,
+#error-encrypted-results,
+#error-encrypted-message,
+#error-decrypted-results
+{
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.card__btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 0.63em;
+    width: auto;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: background-color 2s ease-out 100ms
+}
+
+.card__btn:hover {
+    background-color: #3a893e;
+    color: #fff;
+}
+
+.buy-me-a-drink {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+    width: auto;
+    text-decoration: none;
+    padding: 0.63em;
+
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.social { text-decoration: none; }
+
+.learn {
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em;
+    margin: auto;
+}
+
+@media only screen and (min-width: 40em) {
+    .card__cipher {
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    .learn {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 40.94em) {
+    .main__header {
+        padding: 1.56em;
+    }
+}
+
+@media only screen and (min-width: 103em) {
+    .card__image {
+        max-width: 88%;
+    }
+}

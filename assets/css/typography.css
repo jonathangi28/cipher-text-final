@@ -1,0 +1,29 @@
+body {
+    font: normal 1em Roboto, "Helvetica Neue", sans-serif;
+}
+
+button,
+.learn
+{ font: normal 700 1em Roboto, "Helvetica Neue", sans-serif; }
+
+h1 { font: normal 400 2em "Fjalla One", sans-serif; }
+
+.main__title { font: normal 400 6em "Fjalla One", sans-serif; }
+.section__title { font: normal 400 3.5em "Fjalla One", sans-serif; }
+
+#alphabet-keys,
+#alphabet-values,
+#secret-key,
+#plaintext-message,
+#encrypted-results,
+#encrypted-message,
+#decrypted-results {
+    font: normal 400 1em "Fjalla One", verdana, sans-serif;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 56.94em) {
+
+    .main__title { font: normal 400 5em "Fjalla One", sans-serif; padding: 1em 0 0 0; }
+    button { font: normal 350 1em Roboto, "Helvetica Neue", sans-serif; }
+}
